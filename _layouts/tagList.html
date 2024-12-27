@@ -1,5 +1,6 @@
-{% include header.html %}
-{% include nav.html %}
+---
+layout: default
+---
 
 <div class="tag-list">
     <h1>Tags</h1>
@@ -11,7 +12,7 @@
     </div>
 
     <div class="tag-groups">
-        {% for tag in tags %}
+        {% for tag in site.tags %}
         <div class="tag-group" id="{{ tag[0] }}">
             <h2 class="tag-title">#{{ tag[0] }}</h2>
             <div class="post-list">
@@ -27,5 +28,3 @@
         {% endfor %}
     </div>
 </div>
-
-{% include footer.html %}
