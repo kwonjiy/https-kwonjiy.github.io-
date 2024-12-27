@@ -1,0 +1,25 @@
+# Site settings
+baseurl: ""
+url: ""
+title: "KOMJI BLOG"
+
+# Build settings
+gemfile: "Gemfile"
+markdown: kramdown
+highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - "README.md"
+  - "Gemfile"
+  - "Gemfile.lock"
+
+# Collections
+collections:
+  posts:
+    output: true

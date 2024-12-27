@@ -1,4 +1,6 @@
+/* 네비게이션 스타일 */
 nav {
+    /* 네비게이션 배경 및 텍스트 색상 설정 */
     position: fixed;
     top: 0;
     width: 100%;
@@ -29,6 +31,16 @@ nav ul li a {
     font-weight: bold;
 }
 
+/* 스크롤 시 네비게이션 스타일 */
 .scrolled nav {
+    /* 스크롤 시 네비게이션 위치 조정 */
     top: -60px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    nav ul {
+        /* 작은 화면에서의 네비게이션 방향 조정 */
+        flex-direction: column;
+    }
 }

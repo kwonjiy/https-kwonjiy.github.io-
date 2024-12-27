@@ -1,3 +1,4 @@
+/* 푸터 스타일 */
 .footer-icons {
     display: flex;
     justify-content: center;
@@ -16,4 +17,14 @@ footer p {
     text-align: center;
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
+}
+
+/* 푸터 텍스트 및 아이콘 스타일 설정 */
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    footer {
+        /* 작은 화면에서의 푸터 패딩 조정 */
+        padding: 10px;
+    }
 }

@@ -1,4 +1,6 @@
+/* 헤더 스타일 */
 header {
+    /* 헤더 배경 및 텍스트 색상 설정 */
     background-color: #edc9af;
     color: white;
     padding: 70px 10px 10px 10px;
@@ -31,6 +33,16 @@ nav {
     height: 60px;
 }
 
+/* 스크롤 시 헤더 스타일 */
 .scrolled nav {
+    /* 스크롤 시 네비게이션 위치 조정 */
     top: -60px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    header {
+        /* 작은 화면에서의 헤더 패딩 조정 */
+        padding: 10px;
+    }
 }
