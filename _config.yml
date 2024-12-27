@@ -1,7 +1,7 @@
 title: KOMJI BLOG
 description: 어제 뭐했는지 기억못하는 청년의 기억소
 baseurl: ""
-url: "https://kwonjiy.github.io"
+url: ""
 
 # Build settings
 markdown: kramdown
@@ -10,10 +10,3 @@ permalink: /:categories/:year/:month/:day/:title/
 
 # Pagination
 paginate: 5
-paginate_path: "/views/posts/page/:num/"
-
-# Plugins
-plugins:
-  - jekyll-paginate
-  - jekyll-feed
-  - jekyll-seo-tag
