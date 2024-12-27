@@ -18,8 +18,3 @@ exclude:
   - "README.md"
   - "Gemfile"
   - "Gemfile.lock"
-
-# Collections
-collections:
-  posts:
-    output: true

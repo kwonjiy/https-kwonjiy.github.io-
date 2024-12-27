@@ -33,14 +33,3 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => console.error('Error loading main content:', error));
 });
-
-// 스크롤 이벤트 핸들러
-window.addEventListener('scroll', function() {
-    // 스크롤 위치에 따라 네비게이션 숨김 처리
-    const nav = document.querySelector('nav');
-    if (window.scrollY > 50) {
-        document.body.classList.add('scrolled');
-    } else {
-        document.body.classList.remove('scrolled');
-    }
-});
