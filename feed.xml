@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>Kwonjiy's Blog</title>
+    <link>http://yourdomain.com</link>
+    <description>어제 뭐했는지 기억못하는 청년의 기억소</description>
+    <item>
+      <title>Sample Post</title>
+      <link>http://yourdomain.com/sample-post</link>
+      <description>This is a sample post description.</description>
+      <pubDate>Mon, 27 Dec 2024 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

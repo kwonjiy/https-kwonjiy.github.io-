@@ -1,0 +1,36 @@
+header {
+    background-color: #edc9af;
+    color: white;
+    padding: 70px 10px 10px 10px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+header h1 {
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    font-size: 2em;
+    line-height: 1.2;
+}
+
+header p {
+    margin: 5px 0 0 0;
+    font-size: 0.8em;
+    color: #554133;
+    font-family: 'Lato', sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    transition: top 0.3s;
+    z-index: 1000;
+    height: 60px;
+}
+
+.scrolled nav {
+    top: -60px;
+}

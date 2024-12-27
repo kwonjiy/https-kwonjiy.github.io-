@@ -1,0 +1,19 @@
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.footer-icons a {
+    margin: 0 15px;
+    color: #333;
+    font-size: 1.5em;
+}
+.footer-icons a:hover {
+    color: #8B4513;
+}
+
+footer p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
