@@ -10,3 +10,8 @@ permalink: /:categories/:year/:month/:day/:title/
 
 # Pagination
 paginate: 5
+paginate_path: "/views/posts/page/:num/"
+
+# Plugins
+plugins:
+  - jekyll-paginate
