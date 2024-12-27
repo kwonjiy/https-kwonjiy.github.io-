@@ -18,7 +18,7 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
+    height: 30px;
 }
 
 nav ul li {
@@ -31,16 +31,54 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* 스크롤 시 네비게이션 스타일 */
-.scrolled nav {
-    /* 스크롤 시 네비게이션 위치 조정 */
-    top: -60px;
-}
-
 /* 반응형 디자인 */
 @media (max-width: 768px) {
-    nav ul {
-        /* 작은 화면에서의 네비게이션 방향 조정 */
-        flex-direction: column;
+    nav {
+        height: 50px;
     }
+    
+    nav ul {
+        height: 35px;
+        padding: 0;
+    }
+    
+    nav ul li {
+        margin: 0 12px;
+    }
+    
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        height: 45px;
+    }
+    
+    nav ul {
+        height: 35px;
+        padding: 0;
+        justify-content: space-around;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    nav ul li {
+        margin: 0;
+        padding: 0 5px;
+    }
+    
+    nav ul li a {
+        font-size: 0.8rem;
+        padding: 5px 0;
+        white-space: nowrap;
+    }
+}
+
+/* 스크롤 시 네비게이션 스타일 */
+.scrolled nav {
+    top: -60px;
 }

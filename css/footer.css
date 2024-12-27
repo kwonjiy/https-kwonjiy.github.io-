@@ -1,4 +1,8 @@
 /* 푸터 스타일 */
+#footer {
+    margin-top: 200px;
+}
+
 .footer-icons {
     display: flex;
     justify-content: center;

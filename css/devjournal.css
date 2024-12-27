@@ -1,0 +1,295 @@
+/* 개발 일지 스타일 */
+.dev-journal {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.journal-entry {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    transition: transform 0.2s;
+}
+
+.journal-entry:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.journal-header {
+    margin-bottom: 1.5rem;
+}
+
+.journal-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.journal-date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.journal-content {
+    line-height: 1.8;
+    color: #444;
+}
+
+.journal-content h2 {
+    margin: 2rem 0 1rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.journal-content p {
+    margin-bottom: 1rem;
+}
+
+.journal-content ul,
+.journal-content ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.journal-content li {
+    margin-bottom: 0.5rem;
+}
+
+.journal-content code {
+    background: #f5f5f5;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Consolas', monospace;
+    font-size: 0.9em;
+}
+
+.journal-content pre {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .dev-journal {
+        padding: 1rem;
+    }
+
+    .journal-entry {
+        padding: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .journal-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .dev-journal {
+        padding: 0.8rem;
+    }
+
+    .journal-entry {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .journal-title {
+        font-size: 1.3rem;
+    }
+
+    .journal-content {
+        font-size: 0.95rem;
+    }
+}
+
+    margin: 1.5rem 0;
+}
+
+.journal-content pre code {
+    background: none;
+    padding: 0;
+}
+
+.journal-navigation {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.nav-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.prev-post,
+.next-post {
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: 1px solid #eee;
+}
+
+.prev-post {
+    text-align: left;
+}
+
+.next-post {
+    text-align: right;
+}
+
+.prev-post:hover,
+.next-post:hover {
+    background: #f5f5f5;
+    border-color: #ddd;
+}
+
+.nav-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 0.3rem;
+}
+
+.post-title {
+    display: block;
+    color: #333;
+    font-weight: 500;
+}
+
+/* 개발 일지 목록 스타일 */
+.devjournal-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.devjournal-list h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.devjournal-list .post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.devjournal-list .post-item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.devjournal-list .post-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.devjournal-list .post-item h2 {
+    margin: 0 0 1rem 0;
+}
+
+.devjournal-list .post-item h2 a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.devjournal-list .post-item h2 a:hover {
+    color: #D2B48C;
+}
+
+.devjournal-list .post-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.devjournal-list .post-excerpt {
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.devjournal-list .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.devjournal-list .tag-link {
+    background-color: #f0f0f0;
+    color: #666;
+    padding: 4px 12px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.devjournal-list .tag-link:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-1px);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .devjournal-list {
+        padding: 1.5rem 1rem;
+    }
+
+    .devjournal-list h1 {
+        font-size: 2rem;
+    }
+
+    .devjournal-list .post-item {
+        padding: 1.2rem;
+    }
+
+    .devjournal-list .post-item h2 a {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .devjournal-list {
+        padding: 1rem;
+    }
+
+    .devjournal-list h1 {
+        font-size: 1.8rem;
+    }
+
+    .devjournal-list .post-item {
+        padding: 1rem;
+    }
+
+    .devjournal-list .post-item h2 a {
+        font-size: 1.2rem;
+    }
+
+    .devjournal-list .post-excerpt {
+        font-size: 0.9rem;
+    }
+
+    .devjournal-list .tag-link {
+        font-size: 0.85rem;
+        padding: 3px 10px;
+    }
+}

@@ -1,0 +1,158 @@
+/* 태그 페이지 스타일 */
+.tag-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.tag-list h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* 태그 개요 스타일 */
+.tags-overview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.tag-link {
+    background-color: #f0f0f0;
+    color: #666;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.tag-link:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.tag-count {
+    margin-left: 5px;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* 태그 그룹 스타일 */
+.tag-groups {
+    margin-top: 4rem;
+}
+
+.tag-group {
+    margin-bottom: 4rem;
+}
+
+.tag-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #D2B48C;
+}
+
+/* 포스트 리스트 스타일 */
+.tag-group .post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tag-group .post-item {
+    background-color: white;
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.tag-group .post-item:hover {
+    transform: translateY(-2px);
+}
+
+.tag-group .post-item h3 {
+    margin: 0 0 0.8rem 0;
+}
+
+.tag-group .post-item h3 a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.tag-group .post-item h3 a:hover {
+    color: #D2B48C;
+}
+
+.tag-group .post-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+}
+
+.tag-group .post-excerpt {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .tag-list {
+        padding: 1.5rem 1rem;
+    }
+
+    .tag-list h1 {
+        font-size: 1.8rem;
+    }
+
+    .tags-overview {
+        gap: 0.8rem;
+    }
+
+    .tag-link {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+    .tag-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tag-list {
+        padding: 1rem;
+    }
+
+    .tag-list h1 {
+        font-size: 1.5rem;
+    }
+
+    .tags-overview {
+        gap: 0.6rem;
+    }
+
+    .tag-link {
+        padding: 4px 10px;
+        font-size: 0.85rem;
+    }
+
+    .tag-group .post-item h3 a {
+        font-size: 1.1rem;
+    }
+
+    .tag-group .post-excerpt {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,41 @@
+{% include header.html %}
+{% include nav.html %}
+{% include main-buttons.html %}
+
+<div class="container">
+    <ul class="post-list">
+        {% for post in paginator.posts %}
+            {% unless post.categories contains "DevJournal" %}
+            <li class="post-item">
+                <a href="{{ post.url }}" class="post-link">
+                    <h2 class="post-title">{{ post.title }}</h2>
+                    <div class="post-meta">
+                        <time class="post-date">{{ post.date | date: "%Y년 %m월 %d일" }}</time>
+                    </div>
+                    {% if post.excerpt %}
+                    <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+                    {% endif %}
+                </a>
+            </li>
+            {% endunless %}
+        {% endfor %}
+    </ul>
+
+    {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+        {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+                <span class="current-page">{{ page }}</span>
+            {% else %}
+                {% if page == 1 %}
+                    <a href="/views/posts/">{{ page }}</a>
+                {% else %}
+                    <a href="/views/posts/page/{{ page }}/">{{ page }}</a>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+
+{% include footer.html %}

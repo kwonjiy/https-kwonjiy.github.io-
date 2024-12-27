@@ -12,15 +12,6 @@
     margin-top: 70px; /* 헤더와 메인 사이의 여백 */
 }
 
-/* 게시물 스타일 */
-.post {
-    background-color: white; /* 배경색 */
-    margin-bottom: 20px; /* 하단 여백 */
-    padding: 15px; /* 내부 여백 */
-    border-radius: 5px; /* 모서리 둥글기 */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-}
-
 /* 메인 콘텐츠 영역 스타일 */
 .main-content {
     text-align: center;
@@ -154,106 +145,6 @@
 .career {
     margin-top: 150px; /* Profile 및 Skills와의 여백 동일하게 */
     text-align: center;
-}
-
-/* 포스트 리스트 스타일 */
-.post-list {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-.page-title {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.posts {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.post-item {
-    padding: 1.5rem;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
-}
-
-.post-item:hover {
-    transform: translateY(-2px);
-}
-
-.post-title {
-    margin: 0 0 1rem 0;
-}
-
-.post-title a {
-    color: #2c3e50;
-    text-decoration: none;
-    font-size: 1.5rem;
-}
-
-.post-title a:hover {
-    color: #3498db;
-}
-
-.post-meta {
-    margin-bottom: 1rem;
-    color: #666;
-    font-size: 0.9rem;
-}
-
-.post-excerpt {
-    color: #666;
-    line-height: 1.6;
-}
-
-/* 사이트 레이아웃 스타일 */
-.site-container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.site-header {
-    background-color: #f8f9fa;
-    padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.site-nav {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    display: flex;
-    gap: 2rem;
-}
-
-.site-nav a {
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.site-nav a:hover {
-    color: #007bff;
-}
-
-.site-main {
-    flex: 1;
-    padding: 2rem 0;
-}
-
-.site-footer {
-    background-color: #f8f9fa;
-    padding: 1rem 0;
-    text-align: center;
-    margin-top: auto;
 }
 
 /* 반응형 디자인 */

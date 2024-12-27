@@ -1,15 +1,128 @@
-nav {
+/* 포스트 목록 스타일 */
+.post-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.post-item {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.post-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-title {
+    font-size: 1.4rem;
+    color: #333;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.4;
+    word-break: keep-all;
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.post-date {
+    color: #666;
+}
+
+.post-excerpt {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+    word-break: keep-all;
+}
+
+/* Pagination */
+.pagination {
     display: flex;
     justify-content: center;
-    background-color: #333;
-    padding: 10px;
+    margin-top: 2rem;
+    gap: 1rem;
 }
-nav a {
-    color: white;
-    margin: 0 15px;
+
+.pagination a {
+    padding: 8px 16px;
+    background-color: white;
+    color: #333;
     text-decoration: none;
-    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.2s;
 }
-nav a:hover {
-    text-decoration: underline;
+
+.pagination a:hover {
+    background-color: #f0f0f0;
+}
+
+.pagination .current {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .post-list {
+        margin: 1rem;
+    }
+
+    .post-item {
+        padding: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .post-title {
+        font-size: 1.2rem;
+    }
+
+    .post-excerpt {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .post-list {
+        margin: 0.5rem;
+    }
+
+    .post-item {
+        padding: 1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .post-title {
+        font-size: 1.1rem;
+    }
+
+    .post-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+
+    .post-excerpt {
+        font-size: 0.9rem;
+    }
 }

@@ -1,5 +1,5 @@
-/* 포스트 상세 페이지 스타일 */
-.post-detail {
+/* 개발 일지 상세 페이지 스타일 */
+.devjournal-detail {
     max-width: 800px;
     margin: 2rem auto;
     padding: 2rem;
@@ -8,14 +8,14 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.post-header {
+.title-area {
     text-align: center;
     margin-bottom: 2rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #eee;
 }
 
-.post-title {
+.title {
     font-size: 2.2rem;
     color: #333;
     margin-bottom: 1rem;
@@ -23,20 +23,26 @@
     word-break: keep-all;
 }
 
-.post-meta {
-    color: #666;
-    font-size: 1rem;
-    margin-bottom: 1rem;
+.journal-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.post-tags {
+.date {
+    color: #666;
+    font-size: 1rem;
+}
+
+.tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     justify-content: center;
 }
 
-.post-tag {
+.tag-link {
     background-color: #f0f0f0;
     color: #666;
     padding: 4px 12px;
@@ -46,19 +52,19 @@
     transition: all 0.2s ease;
 }
 
-.post-tag:hover {
+.tag-link:hover {
     background-color: #e0e0e0;
     transform: translateY(-1px);
 }
 
-.post-content {
+.journal-content {
     font-size: 1.1rem;
     line-height: 1.8;
     color: #333;
     word-break: keep-all;
 }
 
-.post-content h2 {
+.journal-content h2 {
     font-size: 1.8rem;
     color: #333;
     margin: 2.5rem 0 1rem;
@@ -66,27 +72,27 @@
     border-bottom: 2px solid #D2B48C;
 }
 
-.post-content h3 {
+.journal-content h3 {
     font-size: 1.5rem;
     color: #444;
     margin: 2rem 0 1rem;
 }
 
-.post-content p {
+.journal-content p {
     margin-bottom: 1.2rem;
 }
 
-.post-content ul,
-.post-content ol {
+.journal-content ul,
+.journal-content ol {
     margin: 1.2rem 0;
     padding-left: 1.5rem;
 }
 
-.post-content li {
+.journal-content li {
     margin-bottom: 0.5rem;
 }
 
-.post-content code {
+.journal-content code {
     background: #f5f5f5;
     padding: 0.2rem 0.4rem;
     border-radius: 4px;
@@ -94,7 +100,7 @@
     font-size: 0.9em;
 }
 
-.post-content pre {
+.journal-content pre {
     background: #f5f5f5;
     padding: 1.2rem;
     border-radius: 8px;
@@ -102,12 +108,12 @@
     margin: 1.5rem 0;
 }
 
-.post-content pre code {
+.journal-content pre code {
     padding: 0;
     background: none;
 }
 
-.post-content img {
+.journal-content img {
     max-width: 100%;
     height: auto;
     margin: 1.5rem auto;
@@ -115,7 +121,7 @@
     display: block;
 }
 
-.post-content blockquote {
+.journal-content blockquote {
     margin: 1.5rem 0;
     padding: 1rem 1.5rem;
     border-left: 4px solid #D2B48C;
@@ -124,55 +130,101 @@
     color: #555;
 }
 
+.journal-navigation {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.prev-post,
+.next-post {
+    flex: 1;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+.prev-post:hover,
+.next-post:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.nav-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.post-title {
+    display: block;
+    font-weight: bold;
+    word-break: keep-all;
+}
+
 /* 반응형 디자인 */
 @media (max-width: 768px) {
-    .post-detail {
+    .devjournal-detail {
         margin: 1.5rem auto;
         padding: 1.5rem;
     }
 
-    .post-title {
+    .title {
         font-size: 1.8rem;
     }
 
-    .post-content {
+    .journal-content {
         font-size: 1rem;
     }
 
-    .post-content h2 {
+    .journal-content h2 {
         font-size: 1.6rem;
     }
 
-    .post-content h3 {
+    .journal-content h3 {
         font-size: 1.3rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
     }
 }
 
 @media (max-width: 480px) {
-    .post-detail {
+    .devjournal-detail {
         margin: 1rem auto;
         padding: 1rem;
     }
 
-    .post-title {
+    .title {
         font-size: 1.5rem;
     }
 
-    .post-content {
+    .journal-content {
         font-size: 0.95rem;
     }
 
-    .post-content h2 {
+    .journal-content h2 {
         font-size: 1.4rem;
         margin: 2rem 0 1rem;
     }
 
-    .post-content h3 {
+    .journal-content h3 {
         font-size: 1.2rem;
         margin: 1.5rem 0 1rem;
     }
 
-    .post-content pre {
+    .journal-content pre {
         padding: 1rem;
         margin: 1rem 0;
     }

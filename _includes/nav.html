@@ -1,0 +1,9 @@
+<nav>
+    <ul>
+        <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>HOME</a></li>
+        <li><a href="/views/about/" {% if page.url contains "/about/" %}class="active"{% endif %}>ABOUT</a></li>
+        <li><a href="/views/posts/" {% if page.url contains "/posts/" %}class="active"{% endif %}>POSTS</a></li>
+        <li><a href="/views/devjournal/" {% if page.url contains "/devjournal/" %}class="active"{% endif %}>DEV JOURNAL</a></li>
+        <li><a href="/views/tags/" {% if page.url contains "/tags/" %}class="active"{% endif %}>TAG</a></li>
+    </ul>
+</nav>

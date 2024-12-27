@@ -43,6 +43,6 @@ nav {
 @media (max-width: 768px) {
     header {
         /* 작은 화면에서의 헤더 패딩 조정 */
-        padding: 10px;
+        margin-top: 5px;
     }
 }

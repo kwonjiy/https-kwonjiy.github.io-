@@ -1,0 +1,31 @@
+{% include header.html %}
+{% include nav.html %}
+
+<div class="tag-list">
+    <h1>Tags</h1>
+    <div class="tags-overview">
+        {% assign tags = site.tags | sort %}
+        {% for tag in tags %}
+        <a href="#{{ tag[0] }}" class="tag-link">#{{ tag[0] }} <span class="tag-count">({{ tag[1].size }})</span></a>
+        {% endfor %}
+    </div>
+
+    <div class="tag-groups">
+        {% for tag in tags %}
+        <div class="tag-group" id="{{ tag[0] }}">
+            <h2 class="tag-title">#{{ tag[0] }}</h2>
+            <div class="post-list">
+                {% for post in tag[1] %}
+                <div class="post-item">
+                    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                    <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+                    <div class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% include footer.html %}

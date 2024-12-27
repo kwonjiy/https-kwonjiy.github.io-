@@ -29,28 +29,6 @@
     margin-bottom: 1rem;
 }
 
-.post-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
-}
-
-.post-tag {
-    background-color: #f0f0f0;
-    color: #666;
-    padding: 4px 12px;
-    border-radius: 15px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: all 0.2s ease;
-}
-
-.post-tag:hover {
-    background-color: #e0e0e0;
-    transform: translateY(-1px);
-}
-
 .post-content {
     font-size: 1.1rem;
     line-height: 1.8;

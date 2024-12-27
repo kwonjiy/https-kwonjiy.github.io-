@@ -1,0 +1,55 @@
+{% include header.html %}
+{% include nav.html %}
+
+<article class="devjournal-detail">
+    <div class="title-area">
+        <h1 class="title">{{ page.title }}</h1>
+        <div class="journal-meta">
+            <time class="date">{{ page.date | date: "%Y년 %m월 %d일" }}</time>
+            <div class="tags">
+                {% for tag in page.tags %}
+                <a href="/views/tags#{{ tag }}" class="tag-link">#{{ tag }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>    
+
+    <div class="journal-content">
+        {{ content }}
+        {% include adsense-article.html %}
+    </div>
+
+    <!-- <div class="journal-navigation">
+        {% assign devjournal_posts = site.categories.DevJournal | sort: 'date' %}
+        {% for post in devjournal_posts %}
+            {% if post.url == page.url %}
+                {% unless forloop.first %}
+                    {% assign prev = prev_post %}
+                {% endunless %}
+                {% unless forloop.last %}
+                    {% assign next = devjournal_posts[forloop.index] %}
+                {% endunless %}
+                {% break %}
+            {% endif %}
+            {% assign prev_post = post %}
+        {% endfor %}
+
+        <div class="nav-links">
+            {% if prev %}
+            <a href="{{ prev.url }}" class="prev-post">
+                <span class="nav-label">이전 일지</span>
+                <span class="post-title">{{ prev.title }}</span>
+            </a>
+            {% endif %}
+            
+            {% if next %}
+            <a href="{{ next.url }}" class="next-post">
+                <span class="nav-label">다음 일지</span>
+                <span class="post-title">{{ next.title }}</span>
+            </a>
+            {% endif %}
+        </div>
+    </div> -->
+</article>
+
+{% include footer.html %}

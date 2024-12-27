@@ -1,0 +1,27 @@
+<ul class="toc">
+    {% if page.previous and page.categories[0] == page.previous.categories[0] %}
+    <li><i class="fas fa-caret-up" style="color: #555;"></i><a href="{{ page.previous.url }}">{{ page.previous.title }}</a> <span>{{ page.previous.date | date: "%Y-%m-%d" }}</span></li>
+    {% endif %}
+    {% if page.next and page.categories[0] == page.next.categories[0] %}
+    <li><i class="fas fa-caret-down" style="color: #555;"></i><a href="{{ page.next.url }}">{{ page.next.title }}</a> <span>{{ page.next.date | date: "%Y-%m-%d" }}</span></li>
+    {% endif %}
+</ul>
+
+{% if page.toc %}
+<div class="toc-container">
+    <h2 class="toc-title">목차</h2>
+    <ul class="toc-list">
+        {% assign headers = content | split: '<h' %}
+        {% for header in headers %}
+            {% if header contains '2' or header contains '3' %}
+                {% assign header_level = header | slice: 0, 1 %}
+                {% assign header_content = header | split: '</h' | first | split: '>' | last | strip_html | strip %}
+                {% assign header_id = header_content | slugify %}
+                <li>
+                    <a href="#{{ header_id }}" class="toc-h{{ header_level }}">{{ header_content }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
