@@ -7,7 +7,6 @@ url: "https://kwonjiy.github.io"
 markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:year/:month/:day/:title/
-theme: minima
 
 # Pagination
 paginate: 5
@@ -17,3 +16,4 @@ paginate_path: "/views/posts/page/:num/"
 plugins:
   - jekyll-paginate
   - jekyll-feed
+  - jekyll-seo-tag
